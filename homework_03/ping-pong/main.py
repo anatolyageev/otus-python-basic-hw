@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -9,3 +10,9 @@ def get_pong():
         "message": "pong"
     }
 
+
+if __name__ == '__main__':
+    uvicorn.run(
+        "main:app",
+        reload=True,
+    )
